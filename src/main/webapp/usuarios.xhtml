@@ -17,11 +17,11 @@
 <h:form>
 <h3>Filter</h3>
 <div>
-    <p:inputText value="#{userBean.filtro}" style="width:600px"/>
-    <p:commandButton value="Search" id="search" action="#{userBean.listUsers(userBean.filtro)}" style="margin-right:20px;" ajax="false" />
+    <p:inputText value="#{usuarioBean.filtro}" style="width:600px"/>
+    <p:commandButton value="Search" id="search" action="#{usuarioBean.listUsers(usuarioBean.filtro)}" style="margin-right:20px;" ajax="false" />
 </div>
 <h3>User list</h3>
-<p:dataTable var="u" value="#{userBean.listUsers(userBean.filtro)}">
+<p:dataTable var="u" value="#{usuarioBean.listUsers(usuarioBean.filtro)}">
   
   <p:column headerText="Id">
     <h:outputText value="#{u.id}"/>
@@ -52,51 +52,51 @@
   </p:column>
   <!-- <p:column headerText="Actions">
     <p:commandButton value="Edit" icon="pi pi-home" action="#{clientesBean.editar(u)}"/>
-    <p:commandButton value="Delete" icon="pi pi-home" action="#{userBean.excluir(u.id)}" />
+    <p:commandButton value="Delete" icon="pi pi-home" action="#{usuarioBean.excluir(u.id)}" />
   </p:column>-->
 </p:dataTable>
   
 <h3>New User Registration</h3>
 <div>
       <p:outputLabel value="Username: "/><br/>
-      <p:inputText value="#{userBean.usuario.username}"/>
+      <p:inputText value="#{usuarioBean.usuario.username}"/>
 </div>
 <div>
       <p:outputLabel value="Password: "/><br/>
-        <p:password id="password" value="#{userBean.usuario.password}" feedback="true" />
+        <p:password id="password" value="#{usuarioBean.usuario.password}" feedback="true" />
 </div>
 <div>              
         <p:outputLabel for="isEnable" value="Is Enabled: "/><br/>
-        <p:selectOneMenu id="isEnable" value="#{userBean.usuario.isEnabled}" style="width:125px">
+        <p:selectOneMenu id="isEnable" value="#{usuarioBean.usuario.isEnabled}" style="width:125px">
             <f:selectItem itemLabel="True" itemValue="true" />
             <f:selectItem itemLabel="False" itemValue="false" />
         </p:selectOneMenu>
 </div>
 <div>
 	<p:outputLabel for="date" value="Date Register: "/><br/>
-    <p:inputMask id="date" value="#{userBean.usuario.registerDate}" mask="99/99/9999">
+    <p:inputMask id="date" value="#{usuarioBean.usuario.registerDate}" mask="99/99/9999">
  		<f:convertDateTime pattern="dd/MM/yyyy" type="date" timeZone="GMT-3"/>
     </p:inputMask>
 </div>
 <div>
        <p:outputLabel value="Name: "/><br/>
-      <p:inputText value="#{userBean.usuario.name}"/>
+      <p:inputText value="#{usuarioBean.usuario.name}"/>
 </div>
 <div>
       <p:outputLabel value="Surname: "/><br/>
-      <p:inputText value="#{userBean.usuario.surname}"/>
+      <p:inputText value="#{usuarioBean.usuario.surname}"/>
 </div>
 <div>
       <p:outputLabel value="Email: "/><br/>
-      <p:inputText value="#{userBean.usuario.email}"/>
+      <p:inputText value="#{usuarioBean.usuario.email}"/>
 </div>
 <div>
       <p:outputLabel for="phone" value="Phone:" /><br/>
-        <p:inputMask id="phone" value="#{userBean.usuario.phone}" mask="(999) 999-9999"/>
+        <p:inputMask id="phone" value="#{usuarioBean.usuario.phone}" mask="(999) 999-9999"/>
 
 </div>
 <div style="padding-top: 10px;">
-	<p:commandButton value="Register" id="register" action="#{userBean.inserir()}" style="margin-right:20px;" ajax="false" />
+	<p:commandButton value="Register" id="register" action="#{usuarioBean.inserir()}" style="margin-right:20px;" ajax="false" />
 </div>
   
 </h:form>

@@ -13,7 +13,7 @@ import model.Usuario;
 
 
 @Stateless
-public class UserDao {
+public class UsuarioDao {
 
 	@PersistenceContext
 	private EntityManager em;

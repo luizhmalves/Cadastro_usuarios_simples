@@ -9,20 +9,20 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 
-import dao.UserDao;
+import dao.UsuarioDao;
 import model.Usuario;
 
 
-@Named("userBean")
+@Named("usuarioBean")
 @SessionScoped
-public class UserBean implements Serializable {
+public class UsuarioBean implements Serializable {
 
 		/**
 	 * 
 	 */
 	private static final long serialVersionUID = -3364269171126880756L;
 		@EJB
-		private UserDao userDao;
+		private UsuarioDao userDao;
 		
 		private Usuario usuario = new Usuario();
 		
