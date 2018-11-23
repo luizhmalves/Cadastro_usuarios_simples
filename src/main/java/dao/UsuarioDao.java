@@ -25,7 +25,7 @@ public class UsuarioDao {
 		} else {
 			em.persist(usuario);
 		}
-		em.refresh(usuario);
+		/*em.refresh(usuario);*/
 	}
 	public List<Usuario> getListUsers(String parameter){
 

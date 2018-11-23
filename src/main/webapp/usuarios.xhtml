@@ -33,7 +33,7 @@
     <h:outputText value="#{u.password}"/>
   </p:column>
   <p:column headerText="Enabled">
-  	<p:selectBooleanButton id="value1" value="#{u.isEnabled}" onLabel="Yes" offLabel="No" style="width:30px" /><font></font>
+  	<p:selectBooleanButton id="value1" value="#{u.isEnabled}" onLabel="Yes" offLabel="No" style="width:80px" /><font></font>
   </p:column>
   <p:column headerText="Register Date"><br/>
     <h:outputText value="#{u.registerDate}"/>
@@ -50,10 +50,10 @@
   <p:column headerText="Phone">
     <h:outputText value="#{u.phone}"/>    
   </p:column>
-  <!-- <p:column headerText="Actions">
+  <p:column headerText="Actions">
     <p:commandButton value="Edit" icon="pi pi-home" action="#{clientesBean.editar(u)}"/>
     <p:commandButton value="Delete" icon="pi pi-home" action="#{usuarioBean.excluir(u.id)}" />
-  </p:column>-->
+  </p:column>
 </p:dataTable>
   
 <h3>New User Registration</h3>

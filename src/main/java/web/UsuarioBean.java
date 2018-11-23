@@ -31,8 +31,8 @@ public class UsuarioBean implements Serializable {
 		public String inserir() {
 			userDao.createOrUpdate(usuario);
 			usuario = new Usuario();
-//			return "user?faces-redirect=true";
-			return "user";
+			return "usuarios?faces-redirect=true";
+//			return "usuarios";
 		}
 		
 		public List<Usuario> getUsers() {
@@ -50,8 +50,8 @@ public class UsuarioBean implements Serializable {
 		public String excluir(Integer userId) {
 			userDao.delete(userId);
 			this.usuario = new Usuario();
-			return "user?faces-redirect=true";
-//			return "user";
+			return "usuarios?faces-redirect=true";
+//			return "usuarios";
 		}
 		
 		public String editar(Usuario user) {
